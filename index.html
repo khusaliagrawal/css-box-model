@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model</title>
+  <style>
+    /* every box is 200px by 200px (content size) */
+    .box {
+      width: 200px;
+      height: 200px;
+    }
+
+    /* box 1: 20px padding all round and a 10px black border */
+    .box1 {
+      background-color: cadetblue;
+      padding: 20px;
+      border: 10px solid black;
+    }
+
+    /* remove the default margins from the paragraph */
+    .box1 p {
+      margin: 0;
+    }
+
+    /* box 2: 20px border top and bottom, 10px left and right.
+       margin-left pushes it so its top-left corner touches box 1's bottom-right corner */
+    .box2 {
+      background-color: gold;
+      border-style: solid;
+      border-color: black;
+      border-width: 20px 10px;
+      margin-left: 260px;
+    }
+
+    /* box 3: 10px border.
+       margin-left moves it left so its top-right corner touches box 2's bottom-left corner */
+    .box3 {
+      background-color: indianred;
+      border: 10px solid black;
+      margin-left: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box box1">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
+      id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna.
+      Phasellus dolor metus, laoreet ac convallis sit amet, efficitur sed dolor.
+    </p>
+  </div>
+  <div class="box box2"></div>
+  <div class="box box3"></div>
+</body>
+
+</html>
